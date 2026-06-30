@@ -57,10 +57,10 @@ export function SiteHeader({ currentLocale, dictionary }: SiteHeaderProps) {
           <Image
             alt={brandMedia.logo.alt[currentLocale]}
             className="site-header__logo"
-            height={60}
+            height={brandMedia.logo.height}
             priority
             src={brandMedia.logo.path}
-            width={112}
+            width={brandMedia.logo.width}
           />
         </Link>
 

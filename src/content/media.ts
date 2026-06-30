@@ -27,13 +27,13 @@ export type CapabilityMedia = ResponsiveImage & {
 export const brandMedia = {
   logo: {
     id: "logo-ktech",
-    source: "assets/source-approved/logo.jpg",
-    path: "/images/brand/logo-ktech.jpg",
-    width: 1896,
-    height: 1016,
+    source: "assets/source-approved/ktech-logo.svg",
+    path: "/brand/ktech-logo.svg",
+    width: 1000,
+    height: 520,
     alt: {
-      vi: "Logo Ktech Việt Nam",
-      en: "Ktech Việt Nam logo",
+      vi: "Ktech Việt Nam",
+      en: "Ktech Việt Nam",
     },
   },
 } as const;
