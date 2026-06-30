@@ -1,11 +1,13 @@
+import { company } from "@/content/company";
+
 const vi = {
   metadata: {
-    title: "Ktech Việt Nam",
+    title: "Ktech Việt Nam | Kỹ thuật, công nghệ và sản xuất công nghiệp",
     description:
-      "Ktech Việt Nam nghiên cứu, thiết kế, chế tạo và tích hợp giải pháp kỹ thuật - công nghệ cho doanh nghiệp và sản xuất công nghiệp.",
+      "Ktech Việt Nam cung cấp năng lực nghiên cứu, thiết kế kỹ thuật, chế tạo, tích hợp hệ thống, AI cho doanh nghiệp, tự động hóa, gia công CNC và giải pháp công nghiệp.",
   },
-  brandName: "Ktech Việt Nam",
-  slogan: "Understand the universe",
+  brandName: company.brandName,
+  slogan: company.slogan,
   localeSwitchLabel: "Chọn ngôn ngữ",
   localeNames: {
     vi: "VI",
@@ -120,21 +122,21 @@ const vi = {
     eyebrow: "TRAO ĐỔI CÙNG KTECH",
     heading: "Bắt đầu từ một yêu cầu kỹ thuật thực tế",
     body: "Ktech sẵn sàng trao đổi về nhu cầu thiết kế, chế tạo, tích hợp hệ thống và các giải pháp công nghệ cho doanh nghiệp.",
-    primaryCta: "Trao đổi dự án",
-    secondaryCta: "Tìm hiểu năng lực",
-    missingDestination:
-      "Thông tin liên hệ chính thức cần được xác nhận trước khi kích hoạt liên kết trao đổi dự án.",
+    emailCta: "Gửi email",
+    phoneCta: `Gọi ${company.phoneDisplay}`,
+    addressLabel: "Địa chỉ",
   },
   footer: {
-    legalName: "Ktech Viet Nam Company Limited",
+    legalName: company.legalName,
     establishedLabel: "Thành lập",
-    establishedValue: "2015",
+    establishedValue: company.establishedYear,
     navigationLabel: "Điều hướng cuối trang",
+    contactLabel: "Liên hệ",
     localeLabel: "Ngôn ngữ",
   },
   notFound: {
     title: "Không tìm thấy trang",
-    description: "Đường dẫn này chưa có trong nền móng website Ktech Việt Nam.",
+    description: "Đường dẫn này không tồn tại trên website Ktech Việt Nam.",
     homeLabel: "Về trang tiếng Việt",
   },
 } as const;

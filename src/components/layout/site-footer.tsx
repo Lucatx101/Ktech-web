@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/layout/container";
+import { company, getCompanyAddress } from "@/content/company";
 import type { Dictionary } from "@/i18n/dictionaries";
 import type { Locale } from "@/i18n/locales";
 import { SUPPORTED_LOCALES } from "@/i18n/locales";
@@ -30,12 +31,21 @@ export function SiteFooter({ currentLocale, dictionary }: SiteFooterProps) {
           aria-label={dictionary.footer.navigationLabel}
           className="site-footer__nav"
         >
-          {footerNavItems.map((item) => (
-            <a href={item.href} key={item.key}>
-              {dictionary.navigation[item.key]}
-            </a>
-          ))}
+          <ul className="site-footer__nav-list">
+            {footerNavItems.map((item) => (
+              <li key={item.key}>
+                <a href={item.href}>{dictionary.navigation[item.key]}</a>
+              </li>
+            ))}
+          </ul>
         </nav>
+
+        <address className="site-footer__contact">
+          <p>{dictionary.footer.contactLabel}</p>
+          <a href={company.emailHref}>{company.email}</a>
+          <a href={company.phoneHref}>{company.phoneDisplay}</a>
+          <span>{getCompanyAddress(currentLocale)}</span>
+        </address>
 
         <div className="site-footer__meta">
           <p>

@@ -36,7 +36,9 @@ export function HeroSection({ dictionary }: HeroSectionProps) {
       <div className="hero-section__overlay" aria-hidden="true" />
 
       <Container className="hero-section__content">
-        <p className="hero-section__eyebrow">{dictionary.hero.eyebrow}</p>
+        <p className="hero-section__eyebrow hero-section__eyebrow--brand">
+          {dictionary.hero.eyebrow}
+        </p>
         <h1
           aria-label={dictionary.hero.headline}
           className="hero-section__title"

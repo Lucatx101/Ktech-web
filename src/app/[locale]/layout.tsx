@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { company, getCanonicalUrl } from "@/content/company";
 import { getDictionary } from "@/i18n/dictionaries";
 import { isLocale, SUPPORTED_LOCALES } from "@/i18n/locales";
 
@@ -26,6 +27,10 @@ export async function generateMetadata({
   const dictionary = await getDictionary(locale);
   const ogLocale = locale === "vi" ? "vi_VN" : "en_US";
   const alternateLocale = locale === "vi" ? "en_US" : "vi_VN";
+  const canonicalUrl = getCanonicalUrl(`/${locale}`);
+  const ogImageUrl = getCanonicalUrl(
+    "/images/hero/hero-industrial-intelligence-v1-1280.webp",
+  );
 
   return {
     title: {
@@ -33,19 +38,35 @@ export async function generateMetadata({
     },
     description: dictionary.metadata.description,
     alternates: {
-      canonical: `/${locale}`,
+      canonical: canonicalUrl,
       languages: {
-        vi: "/vi",
-        en: "/en",
+        "vi-VN": getCanonicalUrl("/vi"),
+        en: getCanonicalUrl("/en"),
+        "x-default": getCanonicalUrl("/vi"),
       },
     },
     openGraph: {
       title: dictionary.metadata.title,
       description: dictionary.metadata.description,
-      siteName: dictionary.brandName,
+      url: canonicalUrl,
+      siteName: company.brandName,
       locale: ogLocale,
       alternateLocale,
       type: "website",
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1280,
+          height: 720,
+          alt: dictionary.hero.imageAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dictionary.metadata.title,
+      description: dictionary.metadata.description,
+      images: [ogImageUrl],
     },
   };
 }

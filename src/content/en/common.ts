@@ -1,11 +1,13 @@
+import { company } from "@/content/company";
+
 const en = {
   metadata: {
-    title: "Ktech Việt Nam",
+    title: "Ktech Vietnam | Engineering, Technology and Industrial Manufacturing",
     description:
-      "Ktech Việt Nam researches, engineers, manufactures and integrates technical solutions for enterprise and industrial operations.",
+      "Ktech Vietnam provides research, engineering design, manufacturing, system integration, enterprise AI, automation, precision CNC machining and industrial solutions.",
   },
-  brandName: "Ktech Việt Nam",
-  slogan: "Understand the universe",
+  brandName: company.brandName,
+  slogan: company.slogan,
   localeSwitchLabel: "Choose language",
   localeNames: {
     vi: "VI",
@@ -120,21 +122,21 @@ const en = {
     eyebrow: "TALK TO KTECH",
     heading: "Start with a real engineering requirement",
     body: "Ktech is ready to discuss engineering design, manufacturing, system integration and technology solutions for businesses.",
-    primaryCta: "Discuss a project",
-    secondaryCta: "Explore capabilities",
-    missingDestination:
-      "Official contact information needs to be confirmed before enabling the project discussion link.",
+    emailCta: "Send an email",
+    phoneCta: `Call ${company.phoneDisplay}`,
+    addressLabel: "Address",
   },
   footer: {
-    legalName: "Ktech Viet Nam Company Limited",
+    legalName: company.legalName,
     establishedLabel: "Established",
-    establishedValue: "2015",
+    establishedValue: company.establishedYear,
     navigationLabel: "Footer navigation",
+    contactLabel: "Contact",
     localeLabel: "Language",
   },
   notFound: {
     title: "Page not found",
-    description: "This route is not part of the Ktech Việt Nam website foundation.",
+    description: "This route does not exist on the Ktech Việt Nam website.",
     homeLabel: "Go to Vietnamese home",
   },
 } as const;

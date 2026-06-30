@@ -4,6 +4,7 @@ import { CapabilitiesSection } from "@/components/layout/capabilities-section";
 import { ContactSection } from "@/components/layout/contact-section";
 import { HeroSection } from "@/components/layout/hero-section";
 import { ManufacturingSection } from "@/components/layout/manufacturing-section";
+import { OrganizationJsonLd } from "@/components/seo/organization-json-ld";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -32,9 +33,10 @@ export default async function LocalePage({ params }: LocalePageProps) {
         <AboutSection dictionary={dictionary} />
         <CapabilitiesSection dictionary={dictionary} locale={locale} />
         <ManufacturingSection dictionary={dictionary} />
-        <ContactSection dictionary={dictionary} />
+        <ContactSection dictionary={dictionary} locale={locale} />
       </main>
       <SiteFooter currentLocale={locale} dictionary={dictionary} />
+      <OrganizationJsonLd locale={locale} />
     </div>
   );
 }
