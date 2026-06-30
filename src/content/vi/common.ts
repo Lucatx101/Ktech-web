@@ -5,17 +5,35 @@ const vi = {
   },
   brandName: "Ktech Việt Nam",
   slogan: "Understand the universe",
-  foundationStatus:
-    "Nền móng song ngữ, token thiết kế và pipeline hình ảnh đã sẵn sàng cho các bước nội dung tiếp theo.",
-  localeSwitchLabel: "Chon ngon ngu",
+  localeSwitchLabel: "Chọn ngôn ngữ",
   localeNames: {
     vi: "VI",
     en: "EN",
   },
   navigation: {
-    home: "Trang chủ",
+    about: "Giới thiệu",
     capabilities: "Năng lực",
+    manufacturing: "Sản xuất",
     contact: "Liên hệ",
+  },
+  header: {
+    menuOpenLabel: "Mở menu điều hướng",
+    menuCloseLabel: "Đóng menu điều hướng",
+    navigationLabel: "Điều hướng chính",
+    contactCta: "Trao đổi dự án",
+  },
+  hero: {
+    eyebrow: "KTECH VIỆT NAM",
+    headline: "Understand the universe",
+    headlineParts: {
+      understand: "Understand",
+      the: "the",
+      universe: "UNIVERSE",
+    },
+    copy: "Nghiên cứu, thiết kế, chế tạo và tích hợp các giải pháp kỹ thuật – công nghệ cho doanh nghiệp và sản xuất công nghiệp.",
+    primaryCta: "Khám phá năng lực",
+    secondaryCta: "Liên hệ Ktech",
+    imageAlt: "Hệ thống robot công nghiệp trong môi trường sản xuất hiện đại",
   },
   notFound: {
     title: "Không tìm thấy trang",
