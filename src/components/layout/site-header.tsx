@@ -91,14 +91,14 @@ export function SiteHeader({ currentLocale, dictionary }: SiteHeaderProps) {
             className="site-header__nav"
           >
             {navItems.map((item) => (
-              <Link
+              <a
                 className="site-header__nav-link"
                 href={item.href}
                 key={item.key}
                 onClick={closeMenu}
               >
                 {dictionary.navigation[item.key]}
-              </Link>
+              </a>
             ))}
           </nav>
 
@@ -109,13 +109,13 @@ export function SiteHeader({ currentLocale, dictionary }: SiteHeaderProps) {
               dictionary={dictionary}
               onNavigate={closeMenu}
             />
-            <Link
+            <a
               className="site-header__contact"
               href="#contact"
               onClick={closeMenu}
             >
               {dictionary.header.contactCta}
-            </Link>
+            </a>
           </div>
         </div>
       </Container>

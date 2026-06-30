@@ -15,13 +15,20 @@ export function ButtonLink({
   href,
   variant = "primary",
 }: ButtonLinkProps) {
+  const linkClassName = ["button-link", `button-link--${variant}`, className]
+    .filter(Boolean)
+    .join(" ");
+
+  if (href.startsWith("#")) {
+    return (
+      <a className={linkClassName} href={href}>
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <Link
-      className={["button-link", `button-link--${variant}`, className]
-        .filter(Boolean)
-        .join(" ")}
-      href={href}
-    >
+    <Link className={linkClassName} href={href}>
       {children}
     </Link>
   );

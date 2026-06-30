@@ -82,6 +82,55 @@ const en = {
       },
     },
   },
+  manufacturing: {
+    eyebrow: "MANUFACTURING CAPABILITY",
+    heading:
+      "Engineering capability supported by direct manufacturing infrastructure",
+    introduction:
+      "Ktech directly invests in and operates equipment for engineering design, fabrication, machining, automated welding, technical-material moulding and the completion of industrial solutions.",
+    figures: [
+      {
+        value: "Approximately 2,000 m²",
+        label: "Across two production facilities",
+      },
+      {
+        value: "4",
+        label: "Production lines",
+      },
+      {
+        value: "Approximately 50",
+        label: "CNC machines",
+      },
+      {
+        value: "2",
+        label: "Plastic/silicone moulding machines",
+      },
+    ],
+    equipmentHeading: "Key technical infrastructure",
+    equipment: [
+      "Automated robotic welding line",
+      "Laser cladding machine",
+      "CNC machining systems",
+      "Plastic and silicone moulding equipment",
+      "Other engineering and production equipment",
+    ],
+  },
+  contact: {
+    eyebrow: "TALK TO KTECH",
+    heading: "Start with a real engineering requirement",
+    body: "Ktech is ready to discuss engineering design, manufacturing, system integration and technology solutions for businesses.",
+    primaryCta: "Discuss a project",
+    secondaryCta: "Explore capabilities",
+    missingDestination:
+      "Official contact information needs to be confirmed before enabling the project discussion link.",
+  },
+  footer: {
+    legalName: "Ktech Viet Nam Company Limited",
+    establishedLabel: "Established",
+    establishedValue: "2015",
+    navigationLabel: "Footer navigation",
+    localeLabel: "Language",
+  },
   notFound: {
     title: "Page not found",
     description: "This route is not part of the Ktech Việt Nam website foundation.",
