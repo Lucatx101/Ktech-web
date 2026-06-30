@@ -1,7 +1,8 @@
 const vi = {
   metadata: {
     title: "Ktech Việt Nam",
-    description: "Nền móng kỹ thuật cho website hồ sơ doanh nghiệp Ktech Việt Nam.",
+    description:
+      "Ktech Việt Nam nghiên cứu, thiết kế, chế tạo và tích hợp giải pháp kỹ thuật - công nghệ cho doanh nghiệp và sản xuất công nghiệp.",
   },
   brandName: "Ktech Việt Nam",
   slogan: "Understand the universe",

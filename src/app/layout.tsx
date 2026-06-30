@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     template: "%s | Ktech Việt Nam",
   },
   description:
-    "Technical foundation for the bilingual Ktech Việt Nam corporate website.",
+    "Ktech Việt Nam researches, engineers, manufactures and integrates technical solutions for enterprise and industrial operations.",
 };
 
 export default function RootLayout({

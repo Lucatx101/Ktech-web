@@ -27,6 +27,10 @@ export function SiteHeader({ currentLocale, dictionary }: SiteHeaderProps) {
   const closeMenu = () => setIsMenuOpen(false);
 
   useEffect(() => {
+    document.documentElement.lang = currentLocale;
+  }, [currentLocale]);
+
+  useEffect(() => {
     if (!isMenuOpen) {
       return;
     }

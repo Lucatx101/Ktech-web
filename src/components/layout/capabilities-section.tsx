@@ -13,6 +13,7 @@ type CapabilitiesSectionProps = Readonly<{
 type CapabilityCardProps = Readonly<{
   description: string;
   image: (typeof capabilityMedia)[number];
+  imageSizes: string;
   locale: Locale;
   number: string;
   title: string;
@@ -52,6 +53,7 @@ export function CapabilitiesSection({
               <CapabilityCard
                 description={content.description}
                 image={image}
+                imageSizes={getCapabilityImageSizes(index)}
                 key={image.id}
                 locale={locale}
                 number={String(index + 1).padStart(2, "0")}
@@ -68,6 +70,7 @@ export function CapabilitiesSection({
 function CapabilityCard({
   description,
   image,
+  imageSizes,
   locale,
   number,
   title,
@@ -79,7 +82,7 @@ function CapabilityCard({
           alt={image.alt[locale]}
           className="capability-card__image"
           height={900}
-          sizes="(min-width: 1024px) 42vw, (min-width: 768px) 46vw, 100vw"
+          sizes={imageSizes}
           src={getLargestVariant(image)}
           width={1200}
         />
@@ -91,6 +94,18 @@ function CapabilityCard({
       </div>
     </article>
   );
+}
+
+function getCapabilityImageSizes(index: number) {
+  if (index === 4) {
+    return "(min-width: 1024px) 30vw, (min-width: 768px) 92vw, 100vw";
+  }
+
+  if (index < 2) {
+    return "(min-width: 1024px) 46vw, (min-width: 768px) 46vw, 100vw";
+  }
+
+  return "(min-width: 1024px) 30vw, (min-width: 768px) 46vw, 100vw";
 }
 
 function getLargestVariant(image: (typeof capabilityMedia)[number]) {

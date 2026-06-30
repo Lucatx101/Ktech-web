@@ -25,7 +25,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
   const dictionary = await getDictionary(locale);
 
   return (
-    <>
+    <div lang={locale}>
       <SiteHeader currentLocale={locale} dictionary={dictionary} />
       <main id="main-content">
         <HeroSection dictionary={dictionary} />
@@ -35,6 +35,6 @@ export default async function LocalePage({ params }: LocalePageProps) {
         <ContactSection dictionary={dictionary} />
       </main>
       <SiteFooter currentLocale={locale} dictionary={dictionary} />
-    </>
+    </div>
   );
 }

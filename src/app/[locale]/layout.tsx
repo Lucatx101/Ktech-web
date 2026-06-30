@@ -24,12 +24,29 @@ export async function generateMetadata({
   }
 
   const dictionary = await getDictionary(locale);
+  const ogLocale = locale === "vi" ? "vi_VN" : "en_US";
+  const alternateLocale = locale === "vi" ? "en_US" : "vi_VN";
 
   return {
     title: {
       absolute: dictionary.metadata.title,
     },
     description: dictionary.metadata.description,
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        vi: "/vi",
+        en: "/en",
+      },
+    },
+    openGraph: {
+      title: dictionary.metadata.title,
+      description: dictionary.metadata.description,
+      siteName: dictionary.brandName,
+      locale: ogLocale,
+      alternateLocale,
+      type: "website",
+    },
   };
 }
 

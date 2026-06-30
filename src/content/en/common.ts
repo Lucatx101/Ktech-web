@@ -1,7 +1,8 @@
 const en = {
   metadata: {
     title: "Ktech Việt Nam",
-    description: "Technical foundation for the Ktech Việt Nam corporate website.",
+    description:
+      "Ktech Việt Nam researches, engineers, manufactures and integrates technical solutions for enterprise and industrial operations.",
   },
   brandName: "Ktech Việt Nam",
   slogan: "Understand the universe",

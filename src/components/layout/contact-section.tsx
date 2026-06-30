@@ -8,7 +8,11 @@ type ContactSectionProps = Readonly<{
 
 export function ContactSection({ dictionary }: ContactSectionProps) {
   return (
-    <section aria-labelledby="contact-title" className="contact-section" id="contact">
+    <section
+      aria-labelledby="contact-title"
+      className="contact-section"
+      id="contact"
+    >
       <Container className="contact-section__inner">
         <div>
           <p className="section-eyebrow">{dictionary.contact.eyebrow}</p>
