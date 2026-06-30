@@ -1,4 +1,6 @@
 import { notFound } from "next/navigation";
+import { AboutSection } from "@/components/layout/about-section";
+import { CapabilitiesSection } from "@/components/layout/capabilities-section";
 import { HeroSection } from "@/components/layout/hero-section";
 import { SiteHeader } from "@/components/layout/site-header";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -24,6 +26,8 @@ export default async function LocalePage({ params }: LocalePageProps) {
       <SiteHeader currentLocale={locale} dictionary={dictionary} />
       <main id="main-content">
         <HeroSection dictionary={dictionary} />
+        <AboutSection dictionary={dictionary} />
+        <CapabilitiesSection dictionary={dictionary} locale={locale} />
       </main>
     </>
   );
